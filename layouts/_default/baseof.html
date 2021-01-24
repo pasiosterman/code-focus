@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+
+<body>
+    <div class="left-window">
+        <div class="content">
+            {{- partial "header.html" . -}}
+            {{.Content}}
+        </div>
+    </div>
+    <div class="right-window">
+        <div class="navigation">
+            <h1><a href="{{.Site.BaseURL}}">{{.Site.Title}}</a></h1>
+            {{- partial "navigation.html" . -}}
+        </div>
+    </div>
+</body>
+
+</html>
