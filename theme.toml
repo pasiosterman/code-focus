@@ -3,7 +3,7 @@ license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
 description = "Mininmal theme inspired by code editors like VSCode. Not very mobile friendly"
 homepage = "https://github.com/pasiosterman/"
-tags = [hugo, theme, code]
+tags = ["hugo", "theme", "code"]
 features = []
 min_version = "0.79.1"
 
