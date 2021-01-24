@@ -1,14 +1,14 @@
-{{- $currentPage := .RelPermalink -}}
+{{- $currentPage := .Permalink -}}
 <ul>
     {{- range $s := .Site.Sections -}}
     <li>{{- singularize ( $s.Name ) -}}
         <ul>
             {{- range $p := $s.Pages -}}
             <li>
-                {{- if eq $p.RelPermalink $currentPage -}}
+                {{- if eq $p.Permalink $currentPage -}}
                 {{- $p.Name -}}
                 {{- else -}}
-                <a href="{{$p.RelPermalink}}">
+                <a href="{{$p.Permalink}}">
                     {{- $p.Name -}}
                 </a>
                 {{- end -}}
