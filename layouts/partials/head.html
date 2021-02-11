@@ -1,5 +1,17 @@
+{{ $language := ( replaceRE "-.[a-zA-Z]" "" .Site.LanguageCode ) }}
 <head>
     <title>{{.Site.Title}} - {{.Page.Title}}</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/syntax.css">
+    
+    {{ if isset .Site.Params "description" -}}
+    <meta name="description" content="{{ .Site.Params.Description }}">
+    {{- end -}}
+
+    {{ if isset .Site.Params "keywords" -}}
+        {{- $keywords := ( delimit .Site.Params.Keywords ", " )}}
+    <meta name="keywords" content="{{ $keywords }}">
+    {{- end -}}
 </head>
